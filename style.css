@@ -1,0 +1,198 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    font-family: "Open Sans";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    overflow: auto;
+    background: linear-gradient(90deg, rgba(60, 60, 242, 1) 0%, rgba(98, 245, 230, 1) 52%, rgba(60, 60, 242,1) 100%);
+    background-color: #ffffff;
+    background-size: auto;
+}
+
+.mainbox {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+.mainbox:after {
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url('https://i.ibb.co/Lz9XSZd/arrow-left.png');
+    background-size: 32px;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 10px solid #000000;
+    overflow: hidden;
+    transition: all ease 5s;
+}
+
+span {
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+.span1 {
+    clip-path: polygon(0% 100%, 100% 50%, 0% 8%);
+    background-color: #fffb00;
+    top: 90px;
+    left: 0px;
+}
+
+.span2 {
+    clip-path: polygon(100% 95%, 0 50%, 120% 0%);
+    background-color: #e32400;
+    top: 97px;
+    right: 0px;
+}
+
+.span3 {
+    clip-path: polygon(45% 0%, 0% 100%, 100% 100%);
+    background-color: #ffaa00;
+    bottom: 0;
+    left: 100px;
+}
+
+.span4 {
+    clip-path: polygon(50% 100%, 100% 0%, 8% 0%);
+    background-color: #0042aa;
+    top: 0;
+    left: 98px;
+}
+
+.box2 {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-135deg);
+}
+
+.box1 .span3 b {
+    transform: translate(-50%, -50%) rotate(-270deg);
+}
+
+.box1 .span1 b,
+.box2 .span1 b {
+    transform: translate(-50%, -50%) rotate(185deg);
+}
+
+.box2 .span3 b {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.box1 .span4 b,
+.box2 .span4 b {
+    transform: translate(-50%, -50%) rotate(-85deg);
+}
+
+span b {
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 5px 20px #000;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.spin:active {
+    width: 70px;
+    height: 70px;
+    font-size: 10px;
+}
+
+.mainbox.animate:after {
+    animation: animateArrow 0.7s ease infinite;
+}
+
+@keyframes animateArrow {
+    50% {
+        right: -40px;
+    }
+}
+
+label {
+    font-size: 25px;
+    position: absolute;
+    left: 14%;
+}
+
+.maintextarea {
+    width: 410px;
+    height: 200px;
+    position: relative;
+}
+
+#textarea {
+    font-size: 25px;
+    margin-top: 230%;
+}
+
+.container {
+    height: 100px;
+    width: 100px;
+}
+
+#display {
+    width: 100px;
+    font-size: 50px;
+    position: absolute;
+    color: blue;
+    left: 43%;
+}
+
+.logo {
+    width: 50px;
+    position: absolute;
+    bottom: 80%;
+}
+
+#startStop {
+    width: 100px;
+    position: absolute;
+    left: 25%;
+    cursor: pointer;
+}
+
+#reset {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    cursor: pointer;
+}
